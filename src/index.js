@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import './assets/css/app.css';
+
+// Import de stylesheets propios
+import './assets/css/sideBar.css'
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
