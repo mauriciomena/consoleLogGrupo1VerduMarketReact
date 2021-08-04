@@ -1,29 +1,33 @@
 import React from 'react';
 import SmallCard from './SmallCard';
 
+
+// NICO: ACÁ INFORMACIÓN PRODUCTOS
+
+
+
 let productInDataBase = {
     color:   "primary",
-    titulo: "Movies in Data Base",
-    valor: 21,
+    titulo: "Productos en DB",
+    valor: 10321,
     icono: "fas fa-film",
 }
 
 let amount ={
     color:   "success",
-    titulo: "Total awards",
+    titulo: "Cantidad de Categorías",
     valor: 79,
     icono: "fas fa-award",
 }
 
 let user = {
     color:   "warning",
-    titulo: "Actors quantity",
-    valor: 49,
+    titulo: "Ofertas Semanales",
+    valor: 5,
     icono: "fas fa-user",
 }
 
 let cardProps = [productInDataBase,amount,user];
-
 
 function ContentRowTop(){
     return (
