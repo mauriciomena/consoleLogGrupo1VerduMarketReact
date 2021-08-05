@@ -29,7 +29,10 @@ let user = {
 
 let cardProps = [productInDataBase,amount,user];
 
-function ContentRowTop(){
+function ContentRowTop(props){
+    let data = props.data;
+    
+
     return (
         <React.Fragment>
         {/*<!-- Content Row -->*/}

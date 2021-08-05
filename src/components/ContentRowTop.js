@@ -2,7 +2,9 @@ import React from 'react';
 import imagenFondo from '../assets/images/mandalorian.jpg';
 import GenresInDb from './GenresInDb';
 import ContentRowMovies from './ContentRowMovies';
-function ContentRowTop(){
+function ContentRowTop(props){
+	let data = props.data ;
+	console.log(data)
     return(
         <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
@@ -12,7 +14,7 @@ function ContentRowTop(){
 					</div>
 				
 					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
+					<ContentRowMovies data={data}/>
 					{/*<!-- End movies in Data Base -->*/}
 					
 	
@@ -36,7 +38,7 @@ function ContentRowTop(){
 						{/*<!-- End content row último producto en DB -->*/}
 
 						{/*<!-- Genres in DB -->*/}
-						<GenresInDb />
+						{/* <GenresInDb /> */}
 
 						{/*<!--End Genres In Db-->*/}		
 					</div>
