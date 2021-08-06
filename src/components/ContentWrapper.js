@@ -1,6 +1,6 @@
 import React from 'react';
 import TopBar from './TopBar';
-import ContentRowTop from './ContentRowTop';
+import AllContent from './AllContent';
 import Movie from './Movie';
 import Footer from './Footer';
 import {useEffect, useState} from 'react';
@@ -43,7 +43,7 @@ function ContentWrapper(){
                     <TopBar />
                     {console.log(productsDb)}
                     {console.log(usersDb)}
-                    <ContentRowTop data={productsDb , usersDb} />
+                    <AllContent data={productsDb , usersDb} />
                     {/* <Movie data={productsDb} /> */}
                     <Footer  />
                 </div>

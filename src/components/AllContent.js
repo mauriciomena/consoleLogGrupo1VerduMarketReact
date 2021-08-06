@@ -1,8 +1,9 @@
 import React from 'react';
 import imagenFondo from '../assets/images/mandalorian.jpg';
-import GenresInDb from './GenresInDb';
-import ContentRowMovies from './ContentRowMovies';
-function ContentRowTop(props){
+import CategoriesInDb from './CategoriesInDb';
+import Cards from './Cards';
+
+function AllContent(props){
 	let data = props.data ;
 	console.log(data)
     return(
@@ -13,9 +14,9 @@ function ContentRowTop(props){
 						<h1 className="h3 mb-0 text-gray-800">Tablero de Control</h1>
 					</div>
 				
-					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies data={data}/>
-					{/*<!-- End movies in Data Base -->*/}
+					{/*<!-- Contenedor de tarjetas-->*/}
+					<Cards data={data}/>
+					{/*<!-- End Contenedor de tarjetas -->*/}
 					
 	
 					{/*<!-- Content Row Last Movie in Data Base -->*/}
@@ -37,10 +38,10 @@ function ContentRowTop(props){
 						</div>
 						{/*<!-- End content row último producto en DB -->*/}
 
-						{/*<!-- Genres in DB -->*/}
-						{/* <GenresInDb /> */}
+						{/*<!-- Categories in DB -->*/}
+						{/* <CategoriesInDb /> */}
 
-						{/*<!--End Genres In Db-->*/}		
+						{/*<!--End Categories in Db-->*/}		
 					</div>
 				</div>
 				{/*<!--End Content Row Top-->*/}
@@ -49,4 +50,4 @@ function ContentRowTop(props){
     )
 
 }
-export default ContentRowTop;
+export default AllContent;
