@@ -4,8 +4,6 @@ import SmallCard from './SmallCard';
 
 // NICO: ACÁ INFORMACIÓN PRODUCTOS
 
-
-
 let productInDataBase = {
     color:   "primary",
     titulo: "Productos en DB",
@@ -30,7 +28,7 @@ let user = {
 let cardProps = [productInDataBase,amount,user];
 
 function Cards(props){
-    let data = props.data;
+    //let data = props.data;
     
 
     return (

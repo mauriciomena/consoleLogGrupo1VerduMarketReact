@@ -1,8 +1,8 @@
 import React from 'react';
 import TopBar from './TopBar';
 import AllContent from './AllContent';
-import Movie from './Movie';
 import Footer from './Footer';
+import Products from './Products';
 import {useEffect, useState} from 'react';
 
 function ContentWrapper(){
@@ -44,7 +44,7 @@ function ContentWrapper(){
                     {console.log(productsDb)}
                     {console.log(usersDb)}
                     <AllContent data={productsDb , usersDb} />
-                    {/* <Movie data={productsDb} /> */}
+                    <Products />
                     <Footer  />
                 </div>
             </div>    
