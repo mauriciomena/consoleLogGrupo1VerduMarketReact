@@ -6,7 +6,7 @@ import Cards from './Cards';
 
 function AllContent(props){
 	let data = props.data ;
-	console.log(data)
+	
     return(
         <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
@@ -28,7 +28,7 @@ function AllContent(props){
 						{/*<!-- End content row último producto en DB -->*/}
 
 						{/*<!-- Categories in DB -->*/}
-						<CategoriesInDb />
+						<CategoriesInDb data={data} />
 
 						{/*<!--End Categories in Db-->*/}		
 					</div>
