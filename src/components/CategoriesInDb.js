@@ -4,7 +4,9 @@ import Category from './Category';
 
 
 function CategoriesInDb(props){
-    let categoryList = props.data.data.countByCategory
+    
+    let categoryList = props.productsDb.countByCategory
+    console.log('categoriesInDb data',props.productsDb);
 
     return (
         <React.Fragment>
