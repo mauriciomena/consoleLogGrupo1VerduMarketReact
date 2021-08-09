@@ -5,6 +5,7 @@ import './assets/css/app.css';
 
 // Import de stylesheets propios
 import './assets/css/sideBar.css'
+import './assets/css/categoriesInDb.css'
 
 import reportWebVitals from './reportWebVitals';
 
