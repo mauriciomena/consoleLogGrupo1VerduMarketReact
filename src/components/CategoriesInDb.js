@@ -1,12 +1,23 @@
 import React, {Component} from 'react';
 //Importar nuestro componente
 import Category from './Category';
+import {useEffect, useState} from 'react';
 
 
-function CategoriesInDb(props){
+function CategoriesInDb(){
     
-    let categoryList = props.productsDb.countByCategory
-    console.log('categoriesInDb data',props.productsDb);
+    const [ categoriesInDb, setCategoriesInDb ] = useState([])
+    
+    useEffect(() => {
+        console.log('%Categories', 'color: red');
+    
+        fetch('https://verdumarket8.herokuapp.com/api/products')
+        .then(response => response.json())
+        .then(data => {
+            setCategoriesInDb(data.data.countByCategory)
+        })
+        .catch(error => console.log(error));
+    }, [])
 
     return (
         <React.Fragment>
@@ -21,7 +32,7 @@ function CategoriesInDb(props){
                         <div  className="row">
                             {
                                 //console.log(this.state.genresList)
-                                categoryList.map((category,index)=>{
+                                categoriesInDb.map((category,index)=>{
                                     return  <Category  {...category}  key={index} />
                                 })
                             }
