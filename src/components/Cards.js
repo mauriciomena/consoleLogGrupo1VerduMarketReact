@@ -43,7 +43,7 @@ function Cards(){
     let amount ={
         color:   "success",
         titulo: "Total categorias en la BD",
-        valor: 80,
+        valor: productsDb.totalCategories ,
         icono: "fas fa-award",
     }
     
