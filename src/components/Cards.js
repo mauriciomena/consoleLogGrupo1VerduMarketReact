@@ -35,21 +35,21 @@ function Cards(){
       
     let productInDataBase = {
         color:   "primary",
-        titulo: "Total productos en la BD",
+        titulo: "Total de productos en la Base De Datos",
         valor: productsDb.count ,
         icono: "fas fa-film",
     }
     
     let amount ={
         color:   "success",
-        titulo: "Total categorias en la BD",
+        titulo: "Total de categorias en la Base De Datos",
         valor: productsDb.totalCategories ,
         icono: "fas fa-award",
     }
     
     let user = {
         color:   "warning",
-        titulo: "Total usuarios en la BD",
+        titulo: "Total de usuarios en la Base De Datos",
         valor: usersDb.total ,
         icono: "fas fa-user",
     }
