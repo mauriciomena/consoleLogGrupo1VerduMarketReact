@@ -43,7 +43,7 @@ function ContentWrapper(){
                     <TopBar />
                     {console.log('productsdb',productsDb)}
                     {console.log('usersDb',usersDb)}
-                    <AllContent data={productsDb , usersDb} />
+                    <AllContent data={productsDb,usersDb} />
                     <Products />
                     <Footer  />
                 </div>

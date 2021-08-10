@@ -1,35 +1,60 @@
 import React from 'react';
 import SmallCard from './SmallCard';
+import {useEffect, useState} from 'react';
+import CategoriesInDb from './CategoriesInDb';
 
 
-// NICO: ACÁ INFORMACIÓN PRODUCTOS
+function Cards(){
 
-let productInDataBase = {
-    color:   "primary",
-    titulo: "Productos en DB",
-    valor: 10321,
-    icono: "fas fa-film",
-}
+    const [ productsDb, setProductsDb ] = useState([])
+    const [ usersDb, setUsersDb ]       = useState([])
 
-let amount ={
-    color:   "success",
-    titulo: "Cantidad de Categorías",
-    valor: 79,
-    icono: "fas fa-award",
-}
 
-let user = {
-    color:   "warning",
-    titulo: "Ofertas Semanales",
-    valor: 5,
-    icono: "fas fa-user",
-}
-
-let cardProps = [productInDataBase,amount,user];
-
-function Cards(props){
-    //let data = props.data;
+    useEffect(() => {
+        console.log('%cProducts', 'color: green');
     
+        fetch('https://verdumarket8.herokuapp.com/api/products')
+        .then(response => response.json())
+        .then(data => {
+            setProductsDb(data.data)
+        })
+        .catch(error => console.log(error));
+    }, [])
+
+    useEffect(() => {
+        console.log('%cUsers', 'color: yellow');
+    
+        fetch('https://verdumarket8.herokuapp.com/api/users')
+        .then(response => response.json())
+        .then(data => {
+            setUsersDb(data.data)
+        })
+        .catch(error => console.log(error));
+    }, [])
+
+      
+    let productInDataBase = {
+        color:   "primary",
+        titulo: "Total productos en la BD",
+        valor: productsDb.count ,
+        icono: "fas fa-film",
+    }
+    
+    let amount ={
+        color:   "success",
+        titulo: "Total categorias en la BD",
+        valor: 80,
+        icono: "fas fa-award",
+    }
+    
+    let user = {
+        color:   "warning",
+        titulo: "Total usuarios en la BD",
+        valor: usersDb.total ,
+        icono: "fas fa-user",
+    }
+    
+    let cardProps = [productInDataBase,amount,user];
 
     return (
         <React.Fragment>
@@ -45,3 +70,4 @@ function Cards(props){
     )
 }
 export default Cards;
+
