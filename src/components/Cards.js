@@ -35,7 +35,7 @@ function Cards(){
         color:   "primary",
         titulo: "Total productos en la BD",
         valor: productsDb.count,
-        icono: "fas fa-film",
+        icono: "fas fa-shopping-basket",
     }
      
     
