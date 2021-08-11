@@ -48,7 +48,7 @@ function Cards(){
     
     let user = {
         color:   "warning",
-        titulo: "Total usuarios en la BD",
+        titulo: "Total de usuarios en la Base De Datos",
         valor: usersDb.total ,
         icono: "fas fa-user",
     }
