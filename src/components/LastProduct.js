@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import Product from './Product';
 
@@ -12,7 +11,7 @@ class LastProductInDB extends Component {
     }
  
     componentDidMount(){
-            fetch('http://localhost:3030/api/products/lastProduct')
+            fetch('https://verdumarket8.herokuapp.com/api/products/lastProduct')
             .then(res => res.json())
             .then((promiseData) => {
                 let lastProduct = promiseData.data;

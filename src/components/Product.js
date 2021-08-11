@@ -3,7 +3,6 @@ import React from 'react';
 function Product(props){
     return(
         <React.Fragment>
-            console.log(props);
             <div className="col-lg-6 mb-4">
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
