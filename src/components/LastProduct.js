@@ -16,7 +16,7 @@ class LastProductInDB extends Component {
             .then(res => res.json())
             .then((promiseData) => {
                 let lastProduct = promiseData.data;
-                this.setState({producto: lastProduct})
+                this.setState({product: lastProduct})
             }) 
     }
     render() { 

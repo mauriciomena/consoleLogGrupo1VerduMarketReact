@@ -3,13 +3,10 @@ import SmallCard from './SmallCard';
 import {useEffect, useState} from 'react';
 import CategoriesInDb from './CategoriesInDb';
 
-
 function Cards(){
-
     const [ productsDb, setProductsDb ] = useState([])
     const [ usersDb, setUsersDb ]       = useState([])
-
-
+ 
     useEffect(() => {
         console.log('%cProducts', 'color: green');
     
@@ -21,6 +18,7 @@ function Cards(){
         .catch(error => console.log(error));
     }, [])
 
+ 
     useEffect(() => {
         console.log('%cUsers', 'color: yellow');
     
@@ -36,14 +34,15 @@ function Cards(){
     let productInDataBase = {
         color:   "primary",
         titulo: "Total productos en la BD",
-        valor: productsDb.count ,
+        valor: productsDb.count,
         icono: "fas fa-film",
     }
+     
     
     let amount ={
         color:   "success",
         titulo: "Total categorias en la BD",
-        valor: 80,
+        valor: productsDb.totalCategories,
         icono: "fas fa-award",
     }
     
@@ -70,4 +69,5 @@ function Cards(){
     )
 }
 export default Cards;
+
 
